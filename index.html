@@ -22,6 +22,14 @@
             </svg>
             <span>logoipsum</span>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <nav class="main-nav">
             <div class="nav-item dropdown-wrapper">
                 <a href="#" id="travelInsuranceBtn">Travel Insurance <span class="chevron">⌄</span></a>
@@ -58,6 +66,54 @@
             <a href="#">Customer Service <span class="chevron">⌄</span></a>
         </nav>
     </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <div class="mobile-nav-header">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 22L22 7L12 2Z" fill="#111827" />
+                    <path d="M12 5L5 8.5L12 19L19 8.5L12 5Z" fill="white" />
+                </svg>
+                <span>logoipsum</span>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <nav class="mobile-nav-content">
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" id="mobileTravelInsuranceBtn">
+                    Travel Insurance
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="chevron-icon">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </a>
+                <div class="mobile-submenu" id="mobileTravelInsuranceSubmenu">
+                    <a href="plans.html">Plans</a>
+                    <a href="#">Upgrades</a>
+                    <a href="#">Traveller Type</a>
+                    <a href="#">Trip Type</a>
+                    <a href="#">Benefits</a>
+                </div>
+            </div>
+            <a href="#" class="mobile-nav-link">Emergency Assistance</a>
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link" id="mobileCustomerServiceBtn">
+                    Customer Service
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="chevron-icon">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="page-overlay" id="pageOverlay"></div>
+
 
     <main class="hero-section">
         <div class="hero-content">
