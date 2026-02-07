@@ -102,4 +102,57 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // Mobile Menu Functionality
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+    const mobileTravelInsuranceBtn = document.getElementById('mobileTravelInsuranceBtn');
+    const mobileTravelInsuranceSubmenu = document.getElementById('mobileTravelInsuranceSubmenu');
+
+    // Toggle mobile menu
+    function toggleMobileMenu(show) {
+        if (show) {
+            mobileNavDrawer.classList.add('active');
+            pageOverlay.classList.add('active');
+            mobileMenuBtn.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        } else {
+            mobileNavDrawer.classList.remove('active');
+            pageOverlay.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Open mobile menu
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMobileMenu(true);
+        });
+    }
+
+    // Close mobile menu
+    if (mobileNavClose) {
+        mobileNavClose.addEventListener('click', () => {
+            toggleMobileMenu(false);
+        });
+    }
+
+    // Close mobile menu when clicking overlay
+    if (pageOverlay) {
+        pageOverlay.addEventListener('click', () => {
+            toggleMobileMenu(false);
+        });
+    }
+
+    // Toggle mobile submenu
+    if (mobileTravelInsuranceBtn && mobileTravelInsuranceSubmenu) {
+        mobileTravelInsuranceBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            mobileTravelInsuranceBtn.classList.toggle('expanded');
+            mobileTravelInsuranceSubmenu.classList.toggle('active');
+        });
+    }
 });
