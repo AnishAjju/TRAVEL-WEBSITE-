@@ -1,0 +1,534 @@
+/* Plans Page Specific Styles */
+
+/* Dark Blue Header Bar */
+.plans-header-bar {
+    background: #1e3a5f;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.plans-header-content {
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.back-link:hover {
+    opacity: 0.8;
+}
+
+.plans-header-bar .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.plans-header-bar .logo svg {
+    color: white;
+}
+
+.header-spacer {
+    width: 80px;
+    /* Balance the back button */
+}
+
+.plans-page {
+    padding-top: 80px;
+    /* Account for fixed header */
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+.plans-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Progress Stepper */
+.progress-stepper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+    background: transparent;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+}
+
+.step:last-child .step-line {
+    display: none;
+}
+
+.step-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-bottom: 0.5rem;
+    z-index: 2;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.step.completed .step-circle {
+    background: #3b82f6;
+    border-color: #3b82f6;
+    color: white;
+}
+
+.step.active .step-circle {
+    background: #3b82f6;
+    border-color: #3b82f6;
+    color: white;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.step-label {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.step.completed .step-label {
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.step.active .step-label {
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+.step-line {
+    position: absolute;
+    top: 14px;
+    left: calc(50% + 14px);
+    width: calc(100% - 28px);
+    height: 2px;
+    background: #e5e7eb;
+    z-index: 1;
+}
+
+.step.completed .step-line {
+    background: #3b82f6;
+}
+
+.step.active .step-line {
+    background: linear-gradient(to right, #3b82f6 0%, #e5e7eb 100%);
+}
+
+/* Trip Details */
+.trip-details {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.detail-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.detail-value {
+    font-size: 0.875rem;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.edit-btn {
+    margin-left: auto;
+    padding: 0.5rem 1.5rem;
+    background: transparent;
+    border: 1px solid #3b82f6;
+    color: #3b82f6;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.edit-btn:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+/* Plans Comparison - Table Layout */
+.plans-comparison {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+/* Plan Headers */
+.plans-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-spacer {
+    background: white;
+}
+
+.plan-header {
+    background: #f9fafb;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-left: 1px solid #e5e7eb;
+}
+
+.plan-header.featured {
+    background: #fffbeb;
+}
+
+.plan-icon {
+    margin: 0 auto 1rem;
+    width: 48px;
+    height: 48px;
+}
+
+.plan-name {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.plan-price-info {
+    margin-top: 1rem;
+}
+
+.price-from {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-bottom: 0.5rem;
+}
+
+.plan-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.plan-price.orange {
+    color: #FBBF24;
+}
+
+.price-decimal {
+    font-size: 1.25rem;
+    vertical-align: super;
+}
+
+.price-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.price-subtext {
+    font-size: 0.7rem;
+    color: #9ca3af;
+    line-height: 1.4;
+}
+
+/* Feature Comparison Rows */
+.feature-comparison {
+    background: white;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid #e5e7eb;
+    min-height: 60px;
+    align-items: center;
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.comparison-row.gray {
+    background: #f9fafb;
+}
+
+.comparison-row.section-header {
+    background: white;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+}
+
+.feature-name {
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    color: #1f2937;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-icon {
+    color: #9ca3af;
+    font-size: 1rem;
+    cursor: help;
+}
+
+.feature-value {
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    color: #1f2937;
+    font-weight: 600;
+    text-align: center;
+    border-left: 1px solid #e5e7eb;
+    position: relative;
+}
+
+.feature-value.unavailable {
+    color: #9ca3af;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.feature-value.dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.value-dropdown {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+/* Action Buttons */
+.plans-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.action-spacer {
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.action-column {
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    border-left: 1px solid #e5e7eb;
+}
+
+.show-benefits {
+    color: #3b82f6;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.show-benefits:hover {
+    text-decoration: underline;
+}
+
+.choose-plan-btn {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.875rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+
+.voyager-btn {
+    background: #1e3a5f;
+    color: white;
+}
+
+.voyager-btn:hover {
+    background: #152a45;
+}
+
+.plus-btn {
+    background: #FBBF24;
+    color: #1f2937;
+}
+
+.plus-btn:hover {
+    background: #F59E0B;
+}
+
+.view-pds {
+    color: #6b7280;
+    font-size: 0.75rem;
+    text-decoration: underline;
+}
+
+.view-pds:hover {
+    color: #1f2937;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+
+    .plans-header,
+    .comparison-row,
+    .plans-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-header,
+    .feature-value,
+    .action-column {
+        border-left: none;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .header-spacer,
+    .action-spacer {
+        display: none;
+    }
+
+    .feature-name {
+        font-weight: 600;
+        background: #f9fafb;
+    }
+}
+
+/* Footer */
+.plans-footer {
+    background: #1e3a5f;
+    color: white;
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .plans-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .trip-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .edit-btn {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .progress-steps {
+        gap: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}

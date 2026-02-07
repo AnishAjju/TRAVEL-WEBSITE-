@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Insurance - Find the Right Plan</title>
+    <meta name="description"
+        content="Get a quote for your travel insurance. Comprehensive plans for single and multi-trip options.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 2L2 9L16 30L30 9L16 2Z" fill="#111827" />
+                <path d="M16 6L6 11L16 26L26 11L16 6Z" fill="white" />
+            </svg>
+            <span>logoipsum</span>
+        </div>
+        <nav class="main-nav">
+            <div class="nav-item dropdown-wrapper">
+                <a href="#" id="travelInsuranceBtn">Travel Insurance <span class="chevron">⌄</span></a>
+                <div class="mega-menu" id="travelInsuranceDropdown">
+                    <div class="mega-menu-content">
+                        <!-- Column 1: Image -->
+                        <div class="mega-col image-col">
+                            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=600&auto=format&fit=crop"
+                                alt="Family Travel">
+                        </div>
+
+                        <!-- Column 2: Info -->
+                        <div class="mega-col info-col">
+                            <h3>Travel Insurance</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida incidunt nl, in
+                                bibendum sapien pellentesque vitae. Vestibulum quis purus neque.</p>
+                            <button class="mega-cta">GET A QUOTE</button>
+                        </div>
+
+                        <!-- Column 3: Links -->
+                        <div class="mega-col links-col">
+                            <ul>
+                                <li><a href="plans.html">Plans</a></li>
+                                <li><a href="#">Upgrades</a></li>
+                                <li><a href="#">Traveller Type</a></li>
+                                <li><a href="#">Trip Type</a></li>
+                                <li><a href="#">Benefits</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">Emergency Assistance</a>
+            <a href="#">Customer Service <span class="chevron">⌄</span></a>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <h2 class="sub-headline">BREAKING THE LIMITS OF TRADITIONAL TRAVEL INSURANCE</h2>
+            <h1 class="headline">Find the Right Plan for You</h1>
+
+            <div class="quote-widget">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="single">Single Trip</button>
+                    <button class="tab-btn" data-tab="multi">Multi Trip</button>
+                </div>
+
+                <form class="quote-form" id="quoteForm">
+                    <div class="form-group">
+                        <label for="destinations">Where are you travelling?</label>
+                        <div class="input-wrapper select-wrapper">
+                            <input type="text" id="destinations" placeholder="Type or choose your destinations"
+                                readonly>
+                            <span class="chevron">⌄</span>
+                        </div>
+                        <div class="tags-container">
+                            <span class="tag">Austria <button type="button" class="remove-tag">×</button></span>
+                            <span class="tag">Bali (Indonesia) <button type="button"
+                                    class="remove-tag">×</button></span>
+                            <span class="tag">Canada <button type="button" class="remove-tag">×</button></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departureDate">When do you leave?</label>
+                        <input type="text" id="departureDate" placeholder="DD/MM/YYYY" onfocus="(this.type='date')"
+                            onblur="(this.type='text')">
+                    </div>
+
+                    <div class="form-group" id="returnDateGroup">
+                        <label for="returnDate">When do you return?</label>
+                        <input type="text" id="returnDate" placeholder="DD/MM/YYYY" onfocus="(this.type='date')"
+                            onblur="(this.type='text')">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Current age of all Travellers?</label>
+                        <div class="travelers-input">
+                            <div class="traveler-age-inputs" id="travelerAges">
+                                <input type="number" class="age-input" placeholder="Age" min="0" max="100">
+                            </div>
+                            <button type="button" class="add-traveler-btn" aria-label="Add traveler">+</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="promoCode" placeholder="Promo Code">
+                    </div>
+
+                    <button type="submit" class="cta-button">GET A QUOTE</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div class="page-overlay" id="pageOverlay"></div>
+
+    <div class="hero-background">
+        <img src="assets/hero.jpg" alt="Family walking on beach with mountains" id="heroImage"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1602088113235-229c19758e9f?q=80&w=1920&auto=format&fit=crop';">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
